@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài Tập Buổi 4 Nâng Cao</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <br />
+      <h3>Bài Tập 1: Chương Trình Tính Ngày tiếp theo và ngày trước đó</h3>
+      <form>
+        <label for="date">Nhập ngày, tháng, năm:</label><br />
+        <input type="number" id="day" name="day" placeholder="Ngày" />
+        <input type="number" id="month" name="month" placeholder="Tháng" />
+        <input type="number" id="year" name="year" placeholder="Năm" />
+      </form>
+      <br />
+      <button class="btn btn-danger" onclick="findNextAndPrev()">
+        Tìm ngày tiếp theo và ngày trước đó
+      </button>
+      <div id="result"></div>
+      <br /><br /><br />
+      <h3>Bài Tập 2: Chương Trình Khai Tháng Nhập Có Bao Nhiêu Ngày</h3>
+      <form>
+        <label for="date">Nhập ngày tháng năm:</label><br />
+        <input type="date" id="date" name="date" /><br /><br />
+      </form>
+      <button class="btn btn-danger" onclick="calculate()">Kiểm Tra</button>
+      <div id="result2"></div>
+      <br /><br /><br />
+      <h3>Bài Tập 3: Chương Trình Nhập Số Nguyên 3 Chữ Số Và In Ra Cách Đọc</h3>
+      <input
+        type="number"
+        id="soNguyen"
+        min="100"
+        max="999"
+        placeholder="Nhập Vào Số 3 chữ số"
+        style="width: 250px; height: 34px;"
+      />
+      <br></br>
+      <button class="btn btn-danger" onclick="readNumber()">Đọc</button>
+      <p id="result3"></p>
+      <br /><br /><br />
+      <h3>Bài Tập 4: Chương Trình Nhập Tọa Độ Và So Sáng Khoảng Cách</h3>
+      <form id="studentForm">
+        <h4>Student 1</h4>
+        <label for="name1">Name:</label><br>
+        <input type="text" id="name1" name="name1"><br>
+        <label for="x1">Nhập Tọa Độ X:</label><br>
+        <input type="number" id="x1" name="x1"><br>
+        <label for="y1">Nhập Tọa Độ Y:</label><br>
+        <input type="number" id="y1" name="y1"><br>
+        <label for="z1">Nhập Tọa Độ Z:</label><br>
+        <input type="number" id="z1" name="z1"><br>
+
+        <h4>Student 2</h4>
+        <label for="name2">Name:</label><br>
+        <input type="text" id="name2" name="name2"><br>
+        <label for="x2">Nhập Tọa Độ X:</label><br>
+        <input type="number" id="x2" name="x2"><br>
+        <label for="y2">Nhập Tọa Độ Y:</label><br>
+        <input type="number" id="y2" name="y2"><br>
+        <label for="z2">Nhập Tọa Độ Z:</label><br>
+        <input type="number" id="z2" name="z2"><br>
+
+        <h4>Student 3</h4>
+        <label for="name3">Name:</label><br>
+        <input type="text" id="name3" name="name3"><br> 
+        <label for="x3">Nhập Tọa Độ X:</label><br>
+        <input type="number" id="x3" name="x3"><br>
+        <label for="y3">Nhập Tọa Độ Y:</label><br>
+        <input type="number" id="y3" name="y3"><br>
+        <label for="z3">Nhập Tọa Độ Z:</label><br>
+        <input type="number" id="z3" name="z3"><br>
+
+        <h4>School</h4>
+        <label for="schoolX">Nhập Tọa Độ X:</label><br>
+        <input type="number" id="schoolX" name="schoolX"><br>
+        <label for="schoolY">Nhập Tọa Độ Y:</label><br>
+        <input type="number" id="schoolY" name="schoolY"><br>
+        <label for="schoolZ">Nhập Tọa Độ Z:</label><br>
+        <input type="number" id="schoolZ" name="schoolZ"><br>
+    <br>
+        <input class="btn btn-danger" type="submit" value="Submit">
+    </form>
+    <p id="result4"></p>
+    
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/index.js" type=""></script>
+  </body>
+</html>
