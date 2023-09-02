@@ -36,6 +36,7 @@ function calculate() {
 // Bài Tập 3: Chương Trình Nhập Số Nguyên 3 Chữ Số Và In Ra Cách Đọc
 
 function readNumber() {
+    // B1: Xác định input
     var soNguyen = document.getElementById("soNguyen").value;
     var result3 = document.getElementById("result3");
     var ones = [
@@ -75,10 +76,12 @@ function readNumber() {
         "chín trăm",
     ];
     var n = parseInt(soNguyen);
+    // B2: Hướng xử lí
     if (n >= 100 && n <= 999) {
         var h = Math.floor(n / 100);
         var t = Math.floor((n % 100) / 10);
         var o = n % 10;
+        // B3: Xuất kết quả
         result3.innerHTML = `Output: ${hundreds[h]} ${tens[t]} ${ones[o]}`
     } else {
         result3.innerHTML = "Vui lòng nhập số nguyên có 3 chữ số";
@@ -92,7 +95,7 @@ function calculateDistance(x1, y1, z1, x2, y2, z2) {
 
 document.getElementById("studentForm").addEventListener("submit", function (event) {
     event.preventDefault();
-
+    // B1: Xác định input
     let name1 = document.getElementById("name1").value;
     let x1 = document.getElementById("x1").value;
     let y1 = document.getElementById("y1").value;
@@ -115,7 +118,7 @@ document.getElementById("studentForm").addEventListener("submit", function (even
     let distance1 = calculateDistance(x1, y1, z1, schoolX, schoolY, schoolZ);
     let distance2 = calculateDistance(x2, y2, z2, schoolX, schoolY, schoolZ);
     let distance3 = calculateDistance(x3, y3, z3, schoolX, schoolY, schoolZ);
-
+    // B2: Hướng xử lí + B3: Xuất kết quả
     if (distance1 > distance2 && distance1 > distance3) {
         document.getElementById("result4").innerHTML = name1 + " là sinh viên có khoảng cách từ nhà tới trường xa nhất";
     } else if (distance2 > distance1 && distance2 > distance3) {
